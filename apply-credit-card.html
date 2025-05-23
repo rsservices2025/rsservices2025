@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Credit Card - Kalyan Enterprise</title>
+    <meta name="description" content="Explore and apply for credit cards from leading banks like Axis, HDFC, and RBL. Unlock rewards, benefits, and financial flexibility with Kalyan Enterprise.">
+    <meta name="keywords" content="apply credit card, new credit card, credit card application, Kalyan Enterprise, Axis bank credit card, HDFC bank credit card, RBL bank credit card, RBL ShopRite credit card, credit card benefits, credit card rewards, cashback credit card, build credit score, best credit cards India, online credit card apply, credit card offers, lifetime free credit card, airport lounge access credit card, EMI on credit card, financial flexibility, credit card comparison, apply online">
+    <style>
+        /* Basic Reset & Defaults (Copied from index.html) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        h1 { font-size: 2.5rem; text-align: center; } /* Adjusted for this page */
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; }
+        h3 { font-size: 1.5rem; color: #0056b3; } /* For subheadings like "Key Advantages" */
+        h4 { font-size: 1.3rem; color: #0056b3; margin-bottom: 0.8rem;}
+
+
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff; /* Primary color */
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .benefits-list { /* Specific style for benefits list */
+            list-style: disc;
+            margin-left: 20px; /* Indent list items */
+            margin-bottom: 30px;
+            max-width: 750px; /* Control width of the list */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .benefits-list li {
+            margin-bottom: 0.5rem;
+            color: #444;
+        }
+         .benefits-list li strong {
+            color: #2c3e50;
+         }
+
+
+        /* Header & Navigation (Simplified for this page) */
+        .header {
+            background-color: #ffffff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .nav-links { /* Basic styling for potential nav links here */
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #007bff;
+        }
+        
+
+        .btn {
+            display: inline-block;
+            background-color: #28a745; /* Accent color */
+            color: #fff !important; /* Ensure text is white */
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn-cta { /* For card apply buttons */
+            background-color: #007bff;
+        }
+        .btn-cta:hover {
+             background-color: #0056b3;
+        }
+        .btn:hover {
+            background-color: #218838; /* Darker accent */
+        }
+
+        /* Sections General Styling */
+        .section {
+            padding: 60px 0;
+        }
+        .section-intro { /* For the introductory text */
+            background-color: #ffffff;
+            padding-bottom: 30px; /* Less padding if followed by another section */
+        }
+        #credit-card-offers {
+            background-color: #e9ecef; /* Light grey background for distinction */
+        }
+
+
+        /* Credit Card Application Section (Copied from index.html) */
+        .card-offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .card-offer-item {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        .card-offer-item .card-logo-name {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .card-offer-item .card-logo-name img { /* Placeholder for bank logos if you add them */
+            height: 40px;
+            margin-right: 15px;
+        }
+        .card-offer-item h4 {
+            margin-bottom: 0; /* Reset margin as it's inside flex */
+        }
+        .card-offer-item .features-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .card-offer-item .features-list li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #444;
+            display: flex;
+            align-items: flex-start; /* Align icon with first line of text */
+        }
+        .card-offer-item .features-list li i {
+            color: #28a745; /* Green check for features */
+            margin-right: 10px;
+            margin-top: 4px; /* Align icon nicely */
+            min-width: 16px; /* Ensure consistent icon spacing */
+        }
+        .card-offer-item .btn-cta {
+            margin-top: auto; /* Push button to the bottom */
+            width: 100%;
+        }
+
+        /* Footer (Copied from index.html) */
+        .footer {
+            background-color: #2c3e50; /* Dark background for footer */
+            color: #e0e0e0;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin-bottom: 0;
+            color: #e0e0e0;
+        }
+        .footer a {
+            color: #00aeff;
+        }
+
+        /* Responsive Adjustments for card grid */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .card-offers-grid {
+                grid-template-columns: 1fr; /* Stack items on smaller screens */
+            }
+            .header .container { /* Basic responsive for header if needed */
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo { margin-bottom: 10px; }
+            .nav-links li { margin-left: 0; margin-right: 15px;}
+            .nav-links { justify-content: center;}
+        }
+         @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links li {
+                margin-bottom: 10px;
+            }
+         }
+
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">KALYAN ENTERPRISE</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Back to Home</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section section-intro">
+        <div class="container">
+            <h1>Unlock a World of Benefits with the Right Credit Card</h1>
+            <p style="text-align:center; max-width: 800px; margin-left:auto; margin-right:auto; margin-bottom: 30px; font-size: 1.1rem;">
+                Choosing the right credit card can open doors to exclusive rewards, unparalleled convenience, and greater financial flexibility. 
+                At Kalyan Enterprise, we help you navigate the options. Credit cards are more than just a payment tool; they are your partners in managing expenses, building a strong credit history, and enjoying a premium lifestyle.
+            </p>
+            <h3 style="text-align:center; margin-bottom: 20px;">Key Advantages of Owning a Credit Card:</h3>
+            <ul class="benefits-list">
+                <li><strong>Rewards & Cashback:</strong> Earn valuable points, air miles, or direct cashback on your everyday spending and special purchases.</li>
+                <li><strong>Exclusive Discounts & Offers:</strong> Avail special discounts and deals on shopping, dining, travel, entertainment, and more.</li>
+                <li><strong>Build Your Credit Score:</strong> Responsible and timely usage of your credit card helps in building a positive credit history, crucial for future loans and financial credibility.</li>
+                <li><strong>Ultimate Convenience & Security:</strong> Enjoy the ease of cashless transactions worldwide, coupled with enhanced security features like fraud protection and emergency card replacement.</li>
+                <li><strong>Financial Flexibility & Emergencies:</strong> Provides a readily available line of credit for unexpected expenses or to manage your cash flow effectively.</li>
+                <li><strong>Easy EMI Options:</strong> Convert large purchases into affordable Equated Monthly Installments (EMIs), making big-ticket items more accessible.</li>
+                <li><strong>Complimentary Perks:</strong> Many cards offer complimentary airport lounge access, insurance coverage (travel, purchase protection), and concierge services.</li>
+            </ul>
+            <p style="text-align:center; max-width: 750px; margin-left:auto; margin-right:auto; margin-bottom: 10px; font-size: 1.05rem;">
+                Explore the curated selection of credit cards below from leading banks. Review their features, understand the benefits, and find the one that best suits your financial needs and lifestyle. Apply today through our trusted partners and step into a world of possibilities!
+            </p>
+        </div>
+    </section>
+
+    <section id="credit-card-offers" class="section">
+        <div class="container">
+            <h2>Choose Your Card & Apply Now</h2>
+            <div class="card-offers-grid">
+                <!-- Axis Bank Credit Card -->
+                <div class="card-offer-item">
+                    <div class="card-logo-name">
+                        <!-- Optional: <img src="axis-logo.png" alt="Axis Bank"> -->
+                        <h4>Axis Bank Credit Card</h4>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i>Higher purchase limits for all your big spends</li>
+                        <li><i class="fas fa-gift"></i>Exciting rewards & cashback benefits on every swipe</li>
+                        <li><i class="fas fa-plane-departure"></i>Complimentary airport lounge access (select cards)</li>
+                        <li><i class="fas fa-credit-card"></i>Choose from a wide range of cards that match your lifestyle</li>
+                        <li><i class="fas fa-ticket-alt"></i>Get discounts on movie tickets</li>
+                        <li><i class="fas fa-gas-pump"></i>Fuel surcharge waiver – save more on every refill</li>
+                        <li><i class="fas fa-utensils"></i>Exclusive hotel & restaurant offers</li>
+                        <li><i class="fas fa-info-circle"></i>Note: Features vary by card type & eligibility</li>
+                    </ul>
+                    <a href="https://leads.banksathi.com/?h=dm5UcENQYzBRMVExWDJjUjlCMUVoUT09" target="_blank" class="btn btn-cta">Apply for Axis Card</a>
+                </div>
+
+                <!-- HDFC Bank Credit Card -->
+                <div class="card-offer-item">
+                     <div class="card-logo-name">
+                        <h4>HDFC Bank Credit Card</h4>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i>Exclusive reward points on purchases</li>
+                        <li><i class="fas fa-check-circle"></i>Cashback on spends made online across various merchants, including Amazon and Flipkart</li>
+                        <li><i class="fas fa-check-circle"></i>Complimentary domestic and international airport lounge access</li>
+                        <li><i class="fas fa-check-circle"></i>Welcome benefits</li>
+                        <li><i class="fas fa-check-circle"></i>Vouchers on meeting minimum monthly spending criteria</li>
+                        <li><i class="fas fa-check-circle"></i>EMIs for transactions</li>
+                    </ul>
+                    <a href="https://leads.banksathi.com/?h=OERGSmwzR2oreXZIR2JaRDdvKy8xZz09" target="_blank" class="btn btn-cta">Apply for HDFC Card</a>
+                </div>
+
+                <!-- RBL Bank ShopRite Credit Card -->
+                <div class="card-offer-item">
+                    <div class="card-logo-name">
+                        <h4>RBL ShopRite Credit Card</h4>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i>Lifetime Free Credit Card</li>
+                        <li><i class="fas fa-check-circle"></i>Welcome Benefit of 2,000 Reward points</li>
+                        <li><i class="fas fa-check-circle"></i>Fuel Surcharge waiver upto INR 100 per month</li>
+                        <li><i class="fas fa-check-circle"></i>Earn 20X Reward points on groceries</li>
+                        <li><i class="fas fa-check-circle"></i>Get 10% discount (up to 100) on movie tickets at BookMyShow</li>
+                        <li><i class="fas fa-check-circle"></i>Joining Fee: NIL</li>
+                        <li><i class="fas fa-check-circle"></i>Annual Fee: NIL</li>
+                    </ul>
+                    <a href="https://leads.banksathi.com/?h=NzlLS016QStlVVBXN0JMTDJKQzhDZz09" target="_blank" class="btn btn-cta">Apply for RBL Card</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYearApplyPage"></span> Kalyan Enterprise. All Rights Reserved.</p>
+            <p>Empowering your financial journey. | <a href="index.html">Back to Main Site</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYearApplyPage').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
