@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Credit Card - Kalyan Enterprise</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta name="description" content="Explore and apply for credit cards from leading banks like Axis, HDFC, and RBL. Unlock rewards, benefits, and financial flexibility with Kalyan Enterprise.">
+    <meta name="keywords" content="apply credit card, new credit card, credit card application, Kalyan Enterprise, Axis bank credit card, HDFC bank credit card, RBL bank credit card, RBL ShopRite credit card, credit card benefits, credit card rewards, cashback credit card, build credit score, best credit cards India, online credit card apply, credit card offers, lifetime free credit card, airport lounge access credit card, EMI on credit card, financial flexibility, credit card comparison, apply online">
+    <style>
+        :root {
+            --primary-color: #1E88E5;
+            --primary-darker: #1565C0;
+            --primary-light: #64B5F6;
+            --primary-color-rgb: 30, 136, 229;
+            --accent-color: #FFB300;
+            --text-on-accent: #212529;
+            --heading-color: #0D47A1;
+            --text-color: #37474F;
+            --text-light: #546E7A;
+            --bg-main: #F5F7FA;
+            --bg-section-alt: #ffffff;
+            --bg-card: #ffffff;
+            --footer-bg: var(--heading-color);
+            --footer-text: #CFD8DC;
+            --footer-link-color: var(--accent-color);
+            --border-color: #E0E0E0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-main);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+            font-weight: 600;
+        }
+        
+        h1 { font-size: 2.5rem; text-align: center; }
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; }
+        h3 { font-size: 1.5rem; color: var(--primary-darker); }
+        h4 { font-size: 1.3rem; color: var(--primary-darker); margin-bottom: 0.8rem;}
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color); 
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--primary-darker);
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .header {
+            background-color: var(--bg-card);
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--heading-color); 
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .nav-links a:hover, .nav-links a.active-page-nav {
+            color: #fff;
+            background-color: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color); 
+            color: #fff !important; 
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn:hover {
+            background-color: var(--primary-darker);
+            transform: translateY(-2px);
+        }
+        .btn-cta { 
+            background-color: var(--accent-color);
+            color: var(--text-on-accent) !important;
+        }
+        .btn-cta:hover {
+             background-color: #FFC107;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+        .section-intro {
+            background-color: var(--bg-section-alt);
+            padding-bottom: 30px;
+        }
+        #credit-card-offers {
+            background-color: var(--bg-main); 
+        }
+
+        /* Banner Slideshow Styles */
+        .page-banner-slideshow-container {
+            max-width: 1100px; /* Match container width */
+            margin: 0 auto 30px auto;
+            position: relative;
+            background-color: var(--bg-card); /* Optional: background for the container itself */
+            padding: 10px; /* Padding around the slideshow frame */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden; /* Ensures content fits within rounded corners */
+        }
+
+        .page-banner-slideshow {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* To hide non-active slides */
+            border-radius: 6px; /* Rounded corners for the image display area */
+        }
+
+        .banner-slide {
+            display: none; /* Hide all slides by default */
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            vertical-align: middle; /* Removes potential space below image */
+            /* For fade transition (optional)
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out; */
+        }
+
+        .banner-slide.active-slide {
+            display: block;
+            /* For fade transition (optional)
+            opacity: 1; */
+        }
+        
+        .banner-dots {
+            text-align: center;
+            padding-top: 15px; /* Space above dots */
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dot.active-dot, .dot:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .intro-text-block {
+            text-align:center; 
+            max-width: 850px; 
+            margin-left:auto; 
+            margin-right:auto; 
+            margin-bottom: 30px; 
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+        .advantages-section h3 {
+            text-align:center; 
+            margin-bottom: 25px;
+        }
+
+        .benefits-list { 
+            list-style: none;
+            padding-left: 0;
+            max-width: 800px; 
+            margin: 0 auto 30px auto;
+        }
+        .benefits-list li {
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            font-size: 1.05rem;
+        }
+         .benefits-list li i {
+            color: var(--primary-color);
+            margin-right: 12px;
+            margin-top: 5px;
+            font-size: 1.1em;
+            min-width: 20px;
+         }
+         .benefits-list li strong {
+            color: var(--text-color);
+         }
+
+        .card-offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .card-offer-item {
+            background-color: var(--bg-card);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-offer-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(var(--primary-color-rgb),0.12);
+        }
+
+        .card-ad-image {
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #f0f0f0; /* Light background for image container */
+            border-radius: 6px;
+            overflow: hidden; /* Ensures image stays within rounded bounds */
+            height: 200px; /* Fixed height for consistency */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-ad-image img {
+            max-width: 100%;
+            max-height: 100%; /* Ensure image fits within fixed height */
+            height: auto; /* Maintain aspect ratio if image is smaller */
+            width: auto;  /* Maintain aspect ratio if image is smaller */
+            object-fit: contain; /* Scales down to fit, maintains aspect ratio */
+        }
+
+        .card-offer-item .card-title {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--heading-color);
+            font-size: 1.6rem;
+        }
+        
+        .card-offer-item .features-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .card-offer-item .features-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start; 
+        }
+        .card-offer-item .features-list li i {
+            color: var(--primary-color); 
+            margin-right: 10px;
+            margin-top: 4px; 
+            min-width: 16px; 
+        }
+        .card-offer-item .btn-cta {
+            margin-top: auto; 
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1.05rem;
+        }
+
+        .footer {
+            background-color: var(--footer-bg); 
+            color: var(--footer-text);
+            text-align: center;
+            padding: 30px 0; 
+            font-size: 0.9rem;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem; 
+            color: var(--footer-text);
+        }
+        .footer a {
+            color: var(--footer-link-color);
+            font-weight: 500;
+        }
+         .footer a:hover {
+            color: var(--primary-light);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            .card-offers-grid {
+                grid-template-columns: 1fr;
+            }
+            .header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .logo { margin-bottom: 15px; }
+            .nav-links { width: 100%; justify-content: center; margin-top: 10px;}
+            .nav-links li { margin-left: 10px; margin-right: 10px;}
+        }
+         @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-links li {
+                margin-bottom: 10px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .nav-links a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            .intro-text-block, .benefits-list {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .page-banner-slideshow-container {
+                margin-left: 5%; /* Adjust for smaller screens */
+                margin-right: 5%;
+                width: 90%;
+                padding: 5px;
+            }
+            .card-ad-image {
+                height: 160px; /* Adjust height for smaller card images */
+            }
+         }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">KALYAN ENTERPRISE</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Back to Home</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner-slideshow-container">
+        <div class="page-banner-slideshow">
+            <img src="assets/axisbanner.jpeg" alt="Axis Bank Credit Card Offers" class="banner-slide">
+            <img src="assets/hdfcbanner.jpeg" alt="HDFC Bank Credit Card Offers" class="banner-slide">
+            <img src="assets/rblbanner.jpeg" alt="RBL Bank Credit Card Offers" class="banner-slide">
+        </div>
+        <div class="banner-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <section class="section section-intro">
+        <div class="container">
+            <h1>Unlock a World of Benefits</h1>
+            <p class="intro-text-block">
+                Choosing the right credit card can open doors to exclusive rewards, unparalleled convenience, and greater financial flexibility. 
+                At Kalyan Enterprise, we help you navigate the options. Credit cards are more than just a payment tool; they are your partners in managing expenses, building a strong credit history, and enjoying a premium lifestyle.
+            </p>
+            <div class="advantages-section">
+                <h3>Key Advantages of Owning a Credit Card:</h3>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-star"></i><strong>Rewards & Cashback:</strong> Earn valuable points, air miles, or direct cashback on your everyday spending and special purchases.</li>
+                    <li><i class="fas fa-tags"></i><strong>Exclusive Discounts & Offers:</strong> Avail special discounts and deals on shopping, dining, travel, entertainment, and more.</li>
+                    <li><i class="fas fa-chart-line"></i><strong>Build Your Credit Score:</strong> Responsible and timely usage of your credit card helps in building a positive credit history, crucial for future loans and financial credibility.</li>
+                    <li><i class="fas fa-shield-alt"></i><strong>Ultimate Convenience & Security:</strong> Enjoy the ease of cashless transactions worldwide, coupled with enhanced security features like fraud protection and emergency card replacement.</li>
+                    <li><i class="fas fa-wallet"></i><strong>Financial Flexibility & Emergencies:</strong> Provides a readily available line of credit for unexpected expenses or to manage your cash flow effectively.</li>
+                    <li><i class="fas fa-file-invoice-dollar"></i><strong>Easy EMI Options:</strong> Convert large purchases into affordable Equated Monthly Installments (EMIs), making big-ticket items more accessible.</li>
+                    <li><i class="fas fa-plane-departure"></i><strong>Complimentary Perks:</strong> Many cards offer complimentary airport lounge access, insurance coverage (travel, purchase protection), and concierge services.</li>
+                </ul>
+            </div>
+            <p class="intro-text-block" style="font-size: 1.05rem;">
+                Explore the curated selection of credit cards below from leading banks. Review their features, understand the benefits, and find the one that best suits your financial needs and lifestyle. Apply today through our trusted partners and step into a world of possibilities!
+            </p>
+        </div>
+    </section>
+
+    <section id="credit-card-offers" class="section">
+        <div class="container">
+            <h2>Choose Your Card & Apply Now</h2>
+            <div class="card-offers-grid">
+                
+                <div class="card-offer-item">
+                    <div class="card-ad-image">
+                        <img src="assets/axisapply.jpeg" alt="Apply for Axis Bank Credit Card">
+                    </div>
+                    <h4 class="card-title">Axis Bank Credit Card</h4>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i>Higher purchase limits for big spends</li>
+                        <li><i class="fas fa-gift"></i>Exciting rewards & cashback benefits</li>
+                        <li><i class="fas fa-plane"></i>Complimentary airport lounge access (select cards)</li>
+                        <li><i class="fas fa-credit-card"></i>Wide range of cards to match your lifestyle</li>
+                        <li><i class="fas fa-ticket-alt"></i>Discounts on movie tickets</li>
+                        <li><i class="fas fa-gas-pump"></i>Fuel surcharge waiver</li>
+                        <li><i class="fas fa-utensils"></i>Exclusive hotel & restaurant offers</li>
+                        <li><i class="fas fa-info-circle"></i>Features vary by card type & eligibility</li>
+                    </ul>
+                    <a href="https://leads.banksathi.com/?h=dm5UcENQYzBRMVExWDJjUjlCMUVoUT09" target="_blank" class="btn btn-cta">Apply for Axis Card</a>
+                </div>
+
+                <div class="card-offer-item">
+                     <div class="card-ad-image">
+                        <img src="assets/hdfcapply.jpeg" alt="Apply for HDFC Bank Credit Card">
+                    </div>
+                    <h4 class="card-title">HDFC Bank Credit Card</h4>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i>Exclusive reward points on purchases</li>
+                        <li><i class="fas fa-shopping-cart"></i>Cashback on online spends (Amazon, Flipkart)</li>
+                        <li><i class="fas fa-plane-departure"></i>Complimentary airport lounge access</li>
+                        <li><i class="fas fa-handshake"></i>Attractive welcome benefits</li>
+                        <li><i class="fas fa-gift"></i>Vouchers on meeting spending criteria</li>
+                        <li><i class="fas fa-percentage"></i>Easy EMIs for transactions</li>
+                    </ul>
+                    <a href="https://leads.banksathi.com/?h=OERGSmwzR2oreXZIR2JaRDdvKy8xZz09" target="_blank" class="btn btn-cta">Apply for HDFC Card</a>
+                </div>
+
+                <div class="card-offer-item">
+                    <div class="card-ad-image">
+                        <img src="assets/rblapply.jpeg" alt="Apply for RBL ShopRite Credit Card">
+                    </div>
+                    <h4 class="card-title">RBL ShopRite Credit Card</h4>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i><strong>Lifetime Free Credit Card</strong></li>
+                        <li><i class="fas fa-gift"></i>Welcome Benefit: 2,000 Reward points</li>
+                        <li><i class="fas fa-gas-pump"></i>Fuel Surcharge waiver (up to ₹100/month)</li>
+                        <li><i class="fas fa-shopping-basket"></i>Earn 20X Reward points on groceries</li>
+                        <li><i class="fas fa-film"></i>10% discount on BookMyShow movie tickets</li>
+                        <li><i class="fas fa-money-bill-wave"></i>Joining Fee: NIL</li>
+                        <li><i class="fas fa-calendar-check"></i>Annual Fee: NIL</li>
+                    </ul>
+                    <a href="https://leads.banksathi.com/?h=NzlLS016QStlVVBXN0JMTDJKQzhDZz09" target="_blank" class="btn btn-cta">Apply for RBL Card</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentYearApplyPage"></span> Kalyan Enterprise. All Rights Reserved.</p>
+            <p>Empowering your financial journey. | <a href="index.html">Back to Main Site</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYearApplyPage').textContent = new Date().getFullYear();
+
+        // Banner Slideshow Logic
+        let currentSlideIndex = 0;
+        let bannerInterval;
+
+        function displaySlide(index) {
+            const slides = document.querySelectorAll(".banner-slide");
+            const dots = document.querySelectorAll(".dot");
+
+            if (slides.length === 0) return; // No slides to display
+
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? "block" : "none";
+                slide.classList.toggle("active-slide", i === index);
+            });
+            if (dots.length > 0) {
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("active-dot", i === index);
+                });
+            }
+        }
+
+        function nextBannerSlide() {
+            const slides = document.querySelectorAll(".banner-slide");
+            if (slides.length === 0) return;
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            displaySlide(currentSlideIndex);
+        }
+
+        function setBannerSlide(index) {
+            currentSlideIndex = index;
+            displaySlide(currentSlideIndex);
+            clearInterval(bannerInterval); // Reset interval on manual navigation
+            bannerInterval = setInterval(nextBannerSlide, 10000); // Restart interval
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll(".banner-slide");
+            const dots = document.querySelectorAll(".dot");
+
+            if (slides.length > 0) {
+                displaySlide(currentSlideIndex); // Show first slide immediately
+                bannerInterval = setInterval(nextBannerSlide, 10000); // Auto-swipe every 10 seconds
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => setBannerSlide(index));
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
